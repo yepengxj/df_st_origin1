@@ -45,7 +45,7 @@ type DeployOptions struct {
 
 const (
 	deployLong = `
-View, start, cancel, or retry a deployment
+hahahaha  xiugaile View, start, cancel, or retry a deployment
 
 This command allows you to control a deployment config. Each individual deployment is exposed
 as a new replication controller, and the deployment process manages scaling down old deployments
