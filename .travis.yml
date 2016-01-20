@@ -15,7 +15,5 @@ deploy:
     - "_output/local/bin/linux/amd64/oc"
     - "_output/local/bin/linux/amd64/openshift"
   skip_cleanup: true
-  on:
-    tags: true
     
 sudo: false
