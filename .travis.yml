@@ -2,16 +2,18 @@ language: go
 
 go:
   - 1.4
-  - 1.5.1
 
 install:
   - export PATH=$GOPATH/bin:./_tools/etcd/bin:$PATH
   - make install-travis
 
-script:
-  - make verify
-
-notifications:
-  irc: "chat.freenode.net#openshift-dev"
-
+deploy:
+  provider: releases
+  api_key:
+    secure: YM4np/7HdIJicOSUZpTXGL6LYSnOQ5xoXUEsWjXt10SHBFk+kEa3zkwBGDfRzolCCRl8yj0izZ+YAGHBd8YyQxE/gKhM4N1PPvzUjqZKGy+FR4qRJlSfVoWUYkETzDq12rCI/l2e0ZRxADIjeXbDrkxc7rr4M11mui9oYa9we2ZbHKjqF05yhVlFuldDDOa4arztSbJHXb/OHGdOt73AtWkTnUKfjyACJQ4ULmX3ddk5NVxm+OPwQ/fHq2O4b1JLLf5aDfdV9XSR41yCZC6s9fjrRNsr+CvkeOAYPF1q2tMyy+LIXxeP5mbrE/Vn8fE9ltjG4+fIa1gRVu2pYoXstQFEKfnPzsuIYO5gTt5NuV8szKwfNF/TouX0leV2dOI2PqJ7sGxg39TWTQVIpxdpcnUautlMz3fqhBs6KX+OP8rtYrks7o1tpWkQmrOsMIDewpFGsc+ojZMr/pr3hQBuH5ZSXDvV1Jc9rodOh9eqbwxiJ8zl+PokZXNR1F0UvQcgdVLEDO5vkNC3zYK2blcpGXhRMNaTK5zFlPg3ABprZoMqkacPLOpxcIUjMMWeQ01uruHzBoO/bqs+0SojGwCMlrngrlNnKmIisR1JV33nMsHDsf/FIhMRHqoffWUQmNCADakFqKYHUfhzPIHyQkKAkgLJGoh7Xxhfhvl7K1FV5qY=
+  file: 
+    - "_output/local/bin/linux/amd64/oc"
+    - "_output/local/bin/linux/amd64/openshift"
+  skip_cleanup: true
+    
 sudo: false
