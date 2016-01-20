@@ -9,7 +9,7 @@ install:
 
 deploy:
   provider: releases
-  api_key: "cbe3d1bd50aad176ab692943194a95d48e55426d"
+  api_key: "8d482fd9d552ae7414175b26dad5ccb3d9dc1177"
   file: 
     - "_output/local/bin/linux/amd64/oc"
     - "_output/local/bin/linux/amd64/openshift"
