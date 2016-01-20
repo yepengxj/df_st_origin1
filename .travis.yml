@@ -2,7 +2,6 @@ language: go
 
 go:
   - 1.4
-  - 1.5.1
 
 install:
   - export PATH=$GOPATH/bin:./_tools/etcd/bin:$PATH
@@ -10,7 +9,7 @@ install:
 
 deploy:
   provider: releases
-  api_key: "31a1e4a477ead56312aeaae8f62f45f11d997109"
+  api_key: "cbe3d1bd50aad176ab692943194a95d48e55426d"
   file: 
     - "_output/local/bin/linux/amd64/oc"
     - "_output/local/bin/linux/amd64/openshift"
