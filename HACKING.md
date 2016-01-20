@@ -1,7 +1,7 @@
 Hacking on OpenShift
 ====================
 
-## Building a Release
+## Building a Release hahahahaha
 
 To build an OpenShift release you run the `hack/build-release.sh` script on a system with Docker, which
 will create a build environment image and then execute a cross platform Go build within it. The build
