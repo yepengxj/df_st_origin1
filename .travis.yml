@@ -8,10 +8,14 @@ install:
   - export PATH=$GOPATH/bin:./_tools/etcd/bin:$PATH
   - make install-travis
 
-script:
-  - make verify
-
-notifications:
-  irc: "chat.freenode.net#openshift-dev"
-
+deploy:
+  provider: releases
+  api_key: "b594edd816a3f5014b2c47268809e46c47f39ffe"
+  file: 
+    - "_output/local/bin/linux/amd64/oc"
+    - "_output/local/bin/linux/amd64/openshift"
+  skip_cleanup: true
+  on:
+    tags: true
+    
 sudo: false
